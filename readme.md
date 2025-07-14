@@ -51,8 +51,7 @@ This project demos a simple real-time pipeline that:
 .
 ├── PlayerReidentification.ipynb   # Colab notebook
 ├── README.md                      # This documentation
-├── best.pt                        # Fine-tuned YOLOv11 weights
-└── 15sec_input_720p.mp4           # Sample video file
+└── Report           
 ```
 
 ---
@@ -89,17 +88,6 @@ tracker = DeepSort(
 
 ---
 
-## ❓ Troubleshooting
-
-- **No GPU?**\
-  In Colab: **Runtime → Change runtime type → GPU**.
-- **File not found?**\
-  Check that your uploaded `.pt` and `.mp4` match the names in the notebook.
-- **IDs jump?**\
-  Increase `max_age` or decrease `max_cosine_distance`.
-
----
-
 ## 🎥 Viewing the Result
 
 Watch the final tracked video here:\
@@ -108,8 +96,4 @@ Watch the final tracked video here:\
 *Video demonstrates persistent player IDs across the 15-second clip.*
 
 ---
-
-## 📞 Contact
-
-For questions, email [**arshdeep@liat.ai**](mailto\:arshdeep@liat.ai) or [**rishit@liat.ai**](mailto\:rishit@liat.ai).
 
