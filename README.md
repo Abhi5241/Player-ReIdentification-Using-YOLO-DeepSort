@@ -1,6 +1,5 @@
 # Player-ReIdentification-Using-YOLO-DeepSort
 
-
 ---
 
 ## 📋 Overview
@@ -16,52 +15,31 @@ This project demos a simple real-time pipeline that:
 ## ⚙️ Requirements
 
 - **Python 3.8+**  
-- **Colab**
+- **Google Colab** (GPU runtime recommended)
 
+---
 
-# Steps to run the project
+## 🚀 Steps to Run
 
-## 1.Open the Colab Notebook
+1. **Open the Colab notebook**  
+   - Open `PlayerReidentification.ipynb` in Google Colab.
 
-## 2.Upload your files
+2. **Upload your files**  
+   - Click the “Choose Files” widget in Colab and select:
+     - `best.pt` (YOLOv11 model weights)  
+     - `15sec_input_720p.mp4` (sample video)
 
-Use the Colab “Choose Files” widget to upload:
+3. **Run all cells**  
+   - Execute each cell in order.  
+   - After completion, you’ll get `tracked_output.mp4` with persistent player IDs.
 
-best.pt
-15sec_input_720p.mp4
+---
 
-## 3.Run all cells
+## 📂 Folder Structure
 
-The pipeline will produce tracked_output.mp4 with persistent IDs.
-
-
-
-## Folder Structure
+```plaintext
 .
 ├── PlayerReidentification.ipynb   # Colab notebook
-
-├── README.md                     # This file
-
-├── Best.pt        # Your YOLO model weights
-
-└── 15sec_input_720p.mp4          # Sample video
-
-
-
-# How It Works
-
-## 1.Detection (YOLOv11)
-
-  1. Predicts bounding boxes + confidences for players/ball.
-
-## 2.Tracking (DeepSORT)
-
-  1.Converts each box → (x1,y1,x2,y2,score) → updates tracks.
-  
-  2.New tracks get new IDs; lost tracks survive for max_age frames.
-
-## 3.Rendering
-
-  1.Draws green boxes + ID labels on each frame.
-  
-  2.Writes frames to tracked_output.mp4.
+├── README.md                      # This documentation
+├── best.pt                        # Fine-tuned YOLOv11 weights
+└── 15sec_input_720p.mp4           # Sample video file
